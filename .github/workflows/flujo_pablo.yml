@@ -33,7 +33,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-session-token: ${{ secrets.AWS_SESSSION_TOKEN }}
-          aws-region: $${{ env.AWS_REGION }}
+          aws-region: ${{ env.AWS_REGION }}
       
       - name: Desplegar a S3 en AWS
         run: aws s3 cp ./index.html s3://pablo-githubactions-s3
